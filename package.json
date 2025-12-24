@@ -1,0 +1,27 @@
+{
+  "name": "node-express",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "Nodejs",
+    "Express"
+  ],
+  "homepage": "https://github.com/Jatnit/Node-Express#readme",
+  "bugs": {
+    "url": "https://github.com/Jatnit/Node-Express/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jatnit/Node-Express.git"
+  },
+  "license": "ISC",
+  "author": "Jatnit",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
