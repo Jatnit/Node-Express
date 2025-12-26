@@ -13,12 +13,21 @@ app.use(morgan('combined'))
 app.engine('hbs', handlebars.engine({extname: '.hbs'}));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 
 
 app.get('/', (req, res) => {
   res.render("home")
 })
+app.get('/about', (req, res) => {
+  res.render("about")
+})
+app.post('/search', (req, res) => {
+  console.log(req.body);
+  res.render("search")
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
-})
+})  
