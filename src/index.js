@@ -3,6 +3,7 @@ const express = require('express')
 var morgan = require('morgan') 
 const app = express()
 const handlebars = require('express-handlebars');
+const route = require('./routes/index')
 
 app.use(express.static(path.join(__dirname, 'public')));
 //HTTP logger
@@ -17,16 +18,9 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 
-app.get('/', (req, res) => {
-  res.render("home")
-})
-app.get('/about', (req, res) => {
-  res.render("about")
-})
-app.post('/search', (req, res) => {
-  console.log(req.body);
-  res.render("search")
-})
+route(app);
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
