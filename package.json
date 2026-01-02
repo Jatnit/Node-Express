@@ -19,6 +19,7 @@
   "type": "commonjs",
   "main": "src/index.js",
   "scripts": {
+    "btf": "prettier --single-quote --trailing-comma all --write 'src/**/*.{js,json,scss}'",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "start": "nodemon --inspect src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,6 +31,9 @@
     "nodemon": "^3.1.11"
   },
   "devDependencies": {
-    "node-sass": "^9.0.0"
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "node-sass": "^9.0.0",
+    "prettier": "^3.7.4"
   }
 }
