@@ -1,12 +1,15 @@
 const newsRoute = require('./news');
-const sideRoute = require('./side');
-function route(app) {
-  app.get('/', (req, res) => {
-    res.render('home');
-  });
+const siteRoute = require('./site');
+const courseRoute = require('./course');
 
-  app.use('/news', newsRoute);
-  app.use('/', sideRoute);
+function route(app) {
+    app.get('/', (req, res) => {
+        res.render('home');
+    });
+
+    app.use('/courses', courseRoute);
+    app.use('/news', newsRoute);
+    app.use('/', siteRoute);
 }
 
 module.exports = route;
